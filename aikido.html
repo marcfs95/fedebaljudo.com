@@ -38,6 +38,62 @@
             flex-direction: column;
             gap: 3em;
         }
+
+        .separator {
+            background-color: #f7e8cd;
+        }
+
+        .news {
+            padding: 2em 10em;
+            background-color: #f9f0e0;
+        }
+
+        .other_news {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5em;
+        }
+
+        .specific_news .news_piece {
+            width: 20em;
+        }
+
+        .slider > div {
+            position: absolute;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+            padding: 5em;
+            color: #000;
+            box-sizing: border-box;
+        }
+
+        img.logo_art {
+            height: 100%;
+            width: auto;
+            padding: 4em 0;
+            box-sizing: border-box;
+        }
+
+        .slider_content_text {
+            width: 50%;
+        }
+
+        .slider_content_text h1 {
+            margin: 0;
+            font-size: 5em;
+        }
+
+        .slider_content_text h3 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .slider_content_text_description {
+            height: fit-content;
+        }
     </style>
 </head>
 
@@ -126,37 +182,17 @@
         <div class="main_banner">
             <div class="slider">
                 <img src="https://via.placeholder.com/1600x1080/a9a9a9/000000" alt="Imagen 1">
-                <div style="
-                position: absolute;
-                display: flex;
-                height: 100%;
-                width: 100%;
-                justify-content: space-between;
-                padding: 5em;
-                color: #000;
-                box-sizing: border-box;">
-                    <div style="width: 50%;">
+                <div class="slider_content">
+                    <div class="slider_content_text">
                         <div>
-                            <h1 style="
-                            margin: 0;
-                            font-size: 5em;
-                        ">AIKIDO</h1>
-                            <h3 style="
-                            margin: 0;
-                            font-size: 2em;
-                        ">El arte de la paz</h3>
+                            <h1>AIKIDO</h1>
+                            <h3>El arte de la paz</h3>
                         </div>
-                        <div style="
-                        height: fit-content;
-                    ">
+                        <div class="slider_content_text_description">
                             <h4>Descubre en el Aikido una disciplina que va más allá de la autodefensa física, enseñándote a utilizar la energía y el movimiento como herramientas para resolver conflictos y promover la colaboración</h4>
                         </div>
                     </div>
-                    <img src="./assets/img/aikido.svg" width="100" height="auto" alt="Imagen 1" style="
-                    height: 100%;
-                    width: auto;
-                    padding: 4em 0;
-                    box-sizing: border-box;">
+                    <img class="logo_art" src="./assets/img/aikido.svg" width="100" height="auto" alt="Imagen 1">
                 </div>
             </div>
         </div>
@@ -180,6 +216,59 @@
                 </div>
             </div>
         </section>
+        <div class="separator">NOTICIAS RELACIONADAS</div>
+        <div class="news">
+            <div class="other_news specific_news">
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                        <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                    </a>
+                </div>
+                <div class="news_piece">
+                    <a href="#">
+                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                        <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="columns">
