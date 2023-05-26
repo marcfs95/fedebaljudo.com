@@ -7,6 +7,38 @@
     <title>Federació Balear de Judo i EE. AA.</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/Logo_fede-150x150.png">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <style>
+        .content_with_image {
+            display: flex;
+            gap: 5em;
+        }
+
+        .content_with_image > div {
+            width: 50%;
+        }
+
+        .content_with_image > .text {
+            max-width: 30em;
+        }
+
+        .content_with_image > .image {
+            width: 50%;
+            display:flex
+        }
+
+        .content_with_image > .image > img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 3em;
+        }
+    </style>
 </head>
 
 <body>
@@ -128,12 +160,26 @@
                 </div>
             </div>
         </div>
-        <article>
-            <h3>Acerca del Aikido</h3>
-            <p>El Aikido es un arte marcial moderno fundado por el fundador Morihei Ueshiba (1883-1969), que estudió los secretos de las artes marciales tradicionales japonesas y luego pasó a establecer una disciplina espiritual más rigurosa. El aikido no compite innecesariamente con los oponentes en términos de fuerza o debilidad. El objetivo es entrenarse mutuamente en una rivalidad amistosa y desarrollar el cuerpo y la mente mediante técnicas nacidas del trabajo corporal y el poder respiratorio del irimi y el desplazamiento. El aikido no compite con otros por superioridad o inferioridad, por lo que no hay combates ni competiciones. El aikido es un arte marcial en el que los alumnos aprenden a respetarse mutuamente y aprenden el espíritu de la armonía a través de la práctica repetida.</p>
-            <h3 style="margin-top: 3em;">Características del Aikido</h3>
-            <p>El entrenamiento de Aikido tiene como objetivo promover el entrenamiento físico y mental, de acuerdo con el nivel de competencia de cada habilidad y la práctica repetida para que cualquiera pueda practicar. El entrenamiento de Aikido no sólo es bueno para la salud, sino que también desarrolla la confianza en uno mismo de forma natural para la vida diaria. El dojo es un lugar ideal para profundizar en la comprensión del ojo humano, para conocer gente independientemente de su edad, sexo y ocupación.</p>
-        </article>
+        <section>
+            <div class="content_with_image">
+                <div class="text">
+                    <h3>Acerca del Aikido</h3>
+                    <p>El Aikido es un arte marcial moderno fundado por el fundador Morihei Ueshiba (1883-1969), que estudió los secretos de las artes marciales tradicionales japonesas y luego pasó a establecer una disciplina espiritual más rigurosa. El aikido no compite innecesariamente con los oponentes en términos de fuerza o debilidad. El objetivo es entrenarse mutuamente en una rivalidad amistosa y desarrollar el cuerpo y la mente mediante técnicas nacidas del trabajo corporal y el poder respiratorio del irimi y el desplazamiento. El aikido no compite con otros por superioridad o inferioridad, por lo que no hay combates ni competiciones. El aikido es un arte marcial en el que los alumnos aprenden a respetarse mutuamente y aprenden el espíritu de la armonía a través de la práctica repetida.</p>
+                </div>
+                <div class="image">
+                    <img src="https://via.placeholder.com/800x600/000/FFFFFF" alt="">
+                </div>
+            </div>
+            <div class="content_with_image">
+                <div class="image">
+                    <img src="https://via.placeholder.com/800x600/000/FFFFFF" alt="">
+                </div>
+                <div class="text">
+                    <h3>Características del Aikido</h3>
+                    <p>El entrenamiento de Aikido tiene como objetivo promover el entrenamiento físico y mental, de acuerdo con el nivel de competencia de cada habilidad y la práctica repetida para que cualquiera pueda practicar. El entrenamiento de Aikido no sólo es bueno para la salud, sino que también desarrolla la confianza en uno mismo de forma natural para la vida diaria. El dojo es un lugar ideal para profundizar en la comprensión del ojo humano, para conocer gente independientemente de su edad, sexo y ocupación.</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="columns">

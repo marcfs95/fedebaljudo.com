@@ -763,9 +763,9 @@ footer .column.sitemap {
     }
 }
 
-/* Article */
+/* section */
 
-article {
+section {
     padding: 2em 15em;
 }
 
@@ -773,6 +773,6 @@ ul {
     list-style: none;
 }
 
-article ul li {
+section ul li {
     margin: 1.5em 0;
 }
