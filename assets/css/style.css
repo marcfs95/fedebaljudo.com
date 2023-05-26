@@ -762,3 +762,17 @@ footer .column.sitemap {
         padding: 1em 0 0;
     }
 }
+
+/* Article */
+
+article {
+    padding: 2em 15em;
+}
+
+ul {
+    list-style: none;
+}
+
+article ul li {
+    margin: 1.5em 0;
+}
