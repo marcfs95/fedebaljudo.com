@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federació Balear de Judo i EE. AA.</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/Logo_fede-150x150.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+
+<body>
+    <header>
+        <div class="menu_title">
+            <a class="logo" href="#">
+                <img alt="Logo" src="./assets/img/cropped-Logo_fede-2.png">
+                Federació Balear de Judo i EE. AA.
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Información General
+                        <img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></a>
+                    <ul>
+                        <li><a href="#">Organigrama</a></li>
+                        <li><a href="#">Censo Electoral 2020-2024</a></li>
+                        <li><a href="#">Estatutos y Reglamentos</a></li>
+                        <li><a href="#">Ley de Transparencia</a></li>
+                        <li class="sub_dropdown">
+                            <a href="#">
+                                Escuela Federativa
+                                <img class="dropdown_arrow icon arrow_right" alt=">"
+                                    src="./assets/icons/Antu-go-down-24.svg"></a>
+                            <ul>
+                                <li><a href="#">Formación</a>
+                                </li>
+                                <li><a href="#">Programas</a>
+                                </li>
+                                <li><a href="#">Normativa EFN</a>
+                                </li>
+                                <li><a href="#">Calendario EFN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Antidopaje</a></li>
+                        <li><a href="#">Prensa y Tv</a></li>
+                        <li class="sub_dropdown">
+                            <a href="#">Circulares<img class="dropdown_arrow icon arrow_right" alt=">"
+                                    src="./assets/icons/Antu-go-down-24.svg"></a>
+                            <ul>
+                                <li><a href="#">RFEJYDA</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Especialidades Deportivas<img class="dropdown_arrow icon" alt="⌄"
+                            src="./assets/icons/Antu-go-down-24.svg"></a>
+                    <ul>
+                        <li><a href="#">Judo</a></li>
+                        <li><a href="#">Aikido</a></li>
+                        <li><a href="#">Kendo</a></li>
+                        <li><a href="#">Defensa Personal</a></li>
+                        <li><a href="#">Wushu</a></li>
+                        <li><a href="#">Jiu Jitsu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Calendario</a></li>
+                <li class="dropdown">
+                    <a href="#">Clubs Baleares<img class="dropdown_arrow icon" alt="⌄"
+                            src="./assets/icons/Antu-go-down-24.svg"></a>
+                    <ul>
+                        <li><a href="#">Clubs Judo</a></li>
+                        <li><a href="#">Clubs Aikido</a></li>
+                        <li><a href="#">Clubs Kendo</a></li>
+                        <li><a href="#">Clubs Defensa Personal</a></li>
+                        <li><a href="#">Clubs Wushu</a></li>
+                        <li><a href="#">Clubs Jiu Jitsu</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Contacta</a>
+                    <ul>
+                        <li><a href="#">Acceso Interno</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu_icons">
+            <a class="searcher icon" href="#">
+                <img alt="Search" src="./assets/icons/1382519138.svg">
+            </a>
+            <a class="hamburger icon" href="#">
+                <img alt="Search" src="./assets/icons/7124209_menu_icon.svg">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div style="width: 100%; height: 90vh; display: flex;">
+            <div style="width: 50%; height: 100%;">
+                <ul>
+                    <li><a href="#">Judo</a></li>
+                    <li><a href="#">Aikido</a></li>
+                    <li><a href="#">Kendo</a></li>
+                    <li><a href="#">Defensa Personal</a></li>
+                    <li><a href="#">Wushu</a></li>
+                    <li><a href="#">Jiu Jitsu</a></li>
+                </ul>
+            </div>
+            <div style="width: 50%; height: 100%;" id="map"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="columns">
+            <div class="column rrss">
+                <div class="footer_column_body">
+                    <ul>
+                        <li><img class="icon" src="./assets/icons/instagram.svg"><a target="_blank"
+                                href="https://www.instagram.com/fbaljyda/">Instagram</a></li>
+                        <li><img class="icon" src="./assets/icons/facebook.svg"><a target="_blank"
+                                href="https://www.facebook.com/profile.php?id=100002640585987">Facebook</a></li>
+                        <li><img class="icon" src="./assets/icons/youtube.svg"><a target="_blank"
+                                href="https://www.youtube.com/channel/UCm8bD4smgksU13BzC0tur7g">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column sitemap">
+                <div class="footer_column_body">
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Información General</a>
+                        </li>
+                        <li><a href="#">Organigrama</a></li>
+                        <li><a href="#">Censo Electoral 2020-2024</a></li>
+                        <li><a href="#">Estatutos y Reglamentos</a></li>
+                        <li><a href="#">Ley de Transparencia</a></li>
+                        <li><a href="#">Antidopaje</a></li>
+                        <li><a href="#">Prensa y Tv</a></li>
+                    </ul>
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Escuela Federativa</a>
+                        </li>
+                        <li><a href="#">Formación</a>
+                        </li>
+                        <li><a href="#">Programas</a>
+                        </li>
+                        <li><a href="#">Normativa EFN</a>
+                        </li>
+                        <li><a href="#">Calendario EFN</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Clubs Baleares</a></li>
+                        <li><a href="#">Clubs Judo</a></li>
+                        <li><a href="#">Clubs Aikido</a></li>
+                        <li><a href="#">Clubs Kendo</a></li>
+                        <li><a href="#">Clubs Defensa Personal</a></li>
+                        <li><a href="#">Clubs Wushu</a></li>
+                        <li><a href="#">Clubs Jiu Jitsu</a></li>
+                    </ul>
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Servicios</a></li>
+                        <li><a href="#">RFEJYDA</a></li>
+                        <li><a href="#">Circulares</a></li>
+                        <li><a href="#">Acceso Interno</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer_column_body">
+                    <ul>
+                        <li><img class="icon" src="./assets/icons/telephone.svg"><a href="tel:+34971461109">(+34) 971
+                                461 109</a></li>
+                        <li><img class="icon" src="./assets/icons/email-433830.svg"><a
+                                href="mailto:secretariageneralfbjudo@gmail.com">secretariageneralfbjudo@gmail.com</a>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/location-433840.svg">
+                            <div class="address">
+                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">Avinguda Uruguay, S/N,
+                                    07010, Palma</a>
+                                <span>Lunes-Viernes de 9:00 a 14:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <span>© Federació Balear de Judo i EE. AA</span>
+            <div class="legal_links">
+                <span>Nota Legal</span>
+                <span>Política de Privacidad</span>
+                <span>Política de Cookies</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([39.613432,2.8829184529439633], 8);
+         L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+            minZoom: 1,
+            maxZoom: 16,
+            ext: 'jpg'
+        }).addTo(map);
+    </script>
+</body>
+
+</html>
