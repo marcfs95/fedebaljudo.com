@@ -11,6 +11,7 @@
         .content_with_image {
             display: flex;
             gap: 5em;
+            justify-content: space-between;
         }
 
         .content_with_image > div {
@@ -18,7 +19,7 @@
         }
 
         .content_with_image > .text {
-            max-width: 30em;
+            /*max-width: 30em;*/
         }
 
         .content_with_image > .image {
@@ -37,6 +38,7 @@
             display: flex;
             flex-direction: column;
             gap: 3em;
+            padding: 2em 5em;
         }
 
         .separator {
@@ -44,15 +46,17 @@
         }
 
         .news {
-            padding: 2em 10em;
-            background-color: #f9f0e0;
+            padding: 2em 3em;
+            background-size: cover;
+            background-position: center;
+            background-image: url(./assets/img/news_background.jpg);
         }
 
         .other_news {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5em;
+            gap: 1em;
         }
 
         .specific_news .news_piece {
@@ -269,6 +273,62 @@
                 </div>
             </div>
         </div>
+        <content class="dojo_locator" style="
+                                    height: 15em;
+                                    display: flex;
+                                    background-image: url('./assets/img/locator_background.jpg');
+                                    width: 100%;
+                                    gap: 2em;
+                                    background-position: center;
+                                    justify-content: space-around;
+                                    box-sizing: border-box;
+                                    background-size: cover;
+                                    padding: 2em 5em;
+                                ">
+            <div style="
+                                    width: 50%;
+                                    box-sizing: unset;
+                                    color: white;
+                                ">
+                <h3 style="
+                                    font-size: 2em;
+                                    margin: 0;
+                                ">Encuentra tu dojo más cercano</h3>
+                <p style="
+                                    margin: 0 0 2em;
+                                ">Utiliza nuestra herramienta de búsqueda para encontrar el dojo más cercano a tu ubicación.
+                </p><span style="
+                                    padding: .5em;
+                                    border: 1px solid;
+                                ">Encuentra tu dojo</span>
+            </div>
+            <div style="
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                ">
+                <div style="
+            position: relative;
+            display: flex;
+            justify-content: center;
+        "><img src="./assets/img/illes_balears.svg" style="height: 100%;"><img src="./assets/icons/location_map.sVg" style="
+            height: 1em;
+            position: absolute;
+            top: 3em;
+            left: 10em;
+        "><img src="./assets/icons/location_map.svg?hola" style="
+            height: 1em;
+            position: absolute;
+            top: 0em;
+            left: 16.5em;
+        "><img src="./assets/icons/location_map.svg?hola" style="
+            height: 1em;
+            position: absolute;
+            bottom: 2em;
+            left: .75em;
+        "></div>
+            </div>
+        </content>
     </main>
     <footer>
         <div class="columns">
