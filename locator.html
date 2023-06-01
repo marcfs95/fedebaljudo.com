@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
         ul.arts_selector > li > a {
             text-decoration: none;
         }
@@ -23,9 +26,11 @@
             font-size: 13px;
             border-bottom: 1px solid rgb(104 104 104);
         }
+
         #map {
             z-index: 0;
         }
+
         .searcher {
             height: 4em;
             display: flex;
@@ -55,10 +60,17 @@
             padding: 0 0.5em;
         }
 
+        .localise:hover {
+            cursor: pointer;
+        }
+
         .locator_results_searcher {
+            padding: 1em 5em;
+        }
+
+        .locator_results_searcher_grid {
             display: flex;
             flex-wrap: wrap;
-            padding: 1em 5em;
             justify-content: space-between;
             gap: 1em;
         }
@@ -231,63 +243,68 @@
                     <span class="localise">Usar mi ubicación</span>
                 </div>
                 <div class="locator_results_searcher">
-                    <div class="dojo_card">
-                        <span class="art_type">AIKIDO</span>
-                        <div class="dojo_logo">
-                            <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
-                        </div>
-                        <div class="dojo_desc">
-                            <span class="dojo_title">Centro Aikido Takemusu</span>
-                            <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
-                            <div class="locator_dojo_contact_buttons">
-                                <img class="icon" alt="Website" src="./assets/icons/internet.svg">
-                                <img class="icon" alt="Phone" src="./assets/icons/call.svg">
-                                <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                    <div>
+                        <h3>Se han encontrado 2 resultados para INCA:</h2>
+                    </div>
+                    <div class="locator_results_searcher_grid">
+                        <div class="dojo_card">
+                            <span class="art_type">AIKIDO</span>
+                            <div class="dojo_logo">
+                                <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
+                            </div>
+                            <div class="dojo_desc">
+                                <span class="dojo_title">Centro Aikido Takemusu</span>
+                                <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
+                                <div class="locator_dojo_contact_buttons">
+                                    <img class="icon" alt="Website" src="./assets/icons/internet.svg">
+                                    <img class="icon" alt="Phone" src="./assets/icons/call.svg">
+                                    <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="dojo_card">
-                        <span class="art_type">AIKIDO</span>
-                        <div class="dojo_logo">
-                            <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
-                        </div>
-                        <div class="dojo_desc">
-                            <span class="dojo_title">Centro Aikido Takemusu</span>
-                            <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
-                            <div class="locator_dojo_contact_buttons">
-                                <img class="icon" alt="Website" src="./assets/icons/internet.svg">
-                                <img class="icon" alt="Phone" src="./assets/icons/call.svg">
-                                <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                        <div class="dojo_card">
+                            <span class="art_type">AIKIDO</span>
+                            <div class="dojo_logo">
+                                <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
+                            </div>
+                            <div class="dojo_desc">
+                                <span class="dojo_title">Centro Aikido Takemusu</span>
+                                <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
+                                <div class="locator_dojo_contact_buttons">
+                                    <img class="icon" alt="Website" src="./assets/icons/internet.svg">
+                                    <img class="icon" alt="Phone" src="./assets/icons/call.svg">
+                                    <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="dojo_card">
-                        <span class="art_type">AIKIDO</span>
-                        <div class="dojo_logo">
-                            <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
-                        </div>
-                        <div class="dojo_desc">
-                            <span class="dojo_title">Centro Aikido Takemusu</span>
-                            <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
-                            <div class="locator_dojo_contact_buttons">
-                                <img class="icon" alt="Website" src="./assets/icons/internet.svg">
-                                <img class="icon" alt="Phone" src="./assets/icons/call.svg">
-                                <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                        <div class="dojo_card">
+                            <span class="art_type">AIKIDO</span>
+                            <div class="dojo_logo">
+                                <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
+                            </div>
+                            <div class="dojo_desc">
+                                <span class="dojo_title">Centro Aikido Takemusu</span>
+                                <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
+                                <div class="locator_dojo_contact_buttons">
+                                    <img class="icon" alt="Website" src="./assets/icons/internet.svg">
+                                    <img class="icon" alt="Phone" src="./assets/icons/call.svg">
+                                    <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="dojo_card">
-                        <span class="art_type">AIKIDO</span>
-                        <div class="dojo_logo">
-                            <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
-                        </div>
-                        <div class="dojo_desc">
-                            <span class="dojo_title">Centro Aikido Takemusu</span>
-                            <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
-                            <div class="locator_dojo_contact_buttons">
-                                <img class="icon" alt="Website" src="./assets/icons/internet.svg">
-                                <img class="icon" alt="Phone" src="./assets/icons/call.svg">
-                                <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                        <div class="dojo_card">
+                            <span class="art_type">AIKIDO</span>
+                            <div class="dojo_logo">
+                                <img src="https://scontent-bcn1-1.xx.fbcdn.net/v/t39.30808-6/298722474_462743979193354_5500915388495560171_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IGCvB7ErSL0AX_yJuAo&_nc_ht=scontent-bcn1-1.xx&oh=00_AfBoGBG4j3p3GHLPCsRCQQ9cW-hDLAxL4L9cWsSgUrKavQ&oe=647B0307" alt="Dojo Logo">
+                            </div>
+                            <div class="dojo_desc">
+                                <span class="dojo_title">Centro Aikido Takemusu</span>
+                                <span class="dojo_address">Carrer Quarter General Luque, 07300, Inca</span>
+                                <div class="locator_dojo_contact_buttons">
+                                    <img class="icon" alt="Website" src="./assets/icons/internet.svg">
+                                    <img class="icon" alt="Phone" src="./assets/icons/call.svg">
+                                    <img class="icon" alt="Email" src="./assets/icons/email.svg">
+                                </div>
                             </div>
                         </div>
                     </div>
