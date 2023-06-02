@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federació Balear de Judo i EE. AA.</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/Logo_fede-150x150.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100;400&display=swap');
+
+        .content_with_image {
+            display: flex;
+            gap: 5em;
+            justify-content: space-between;
+        }
+
+        .content_with_image > div {
+            width: 50%;
+        }
+
+        .content_with_image > .text {
+            /*max-width: 30em;*/
+        }
+
+        .content_with_image > .image {
+            width: 50%;
+            display:flex
+        }
+
+        .content_with_image > .image > img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 3em;
+            padding: 2em 5em;
+        }
+
+        .separator {
+            background-color: #f7e8cd;
+        }
+
+        .news {
+            padding: 2em 3em;
+            background-size: cover;
+            background-position: center;
+            background-image: url(./assets/img/news_background.jpg);
+        }
+
+        .other_news {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .specific_news .news_piece {
+            width: 20em;
+        }
+
+        .slider > div {
+            position: absolute;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+            padding: 5em;
+            color: #000;
+            box-sizing: border-box;
+        }
+
+        img.logo_art {
+            height: 100%;
+            width: auto;
+            padding: 4em 0;
+            box-sizing: border-box;
+        }
+
+        .slider_content_text {
+            width: 50%;
+        }
+
+        .slider_content_text h1 {
+            margin: 0;
+            font-size: 5em;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .slider_content_text h3 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .slider_content_text_description {
+            height: fit-content;
+        }
+
+        ul.arts_selector > li > a {
+            text-decoration: none;
+        }
+        ul.arts_selector {
+            display: flex;
+            margin: 0;
+            padding: 1em 5em;
+            justify-content: space-between;
+            gap: 2em;
+            text-transform: uppercase;
+            font-size: 13px;
+            border-bottom: 1px solid rgb(104 104 104);
+        }
+        .searcher {
+            height: 4em;
+            display: flex;
+            gap: 2em;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 5em;
+        }
+
+        .searcher input[type="text"]:focus {
+            outline: none;
+        }
+
+        .searcher input[type="text"] {
+            width: 100%;
+            height: 2em;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 1px solid rgb(104 104 104);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="menu_title">
+            <a class="logo" href="#">
+                <img alt="Logo"
+                    src="./assets/img/cropped-Logo_fede-2.png" />
+                Federació Balear de Judo i EE. AA.
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Información General
+                        <img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg" /></a>
+                    <ul>
+                        <li><a href="#">Organigrama</a></li>
+                        <li><a href="#">Censo Electoral 2020-2024</a></li>
+                        <li><a href="#">Estatutos y Reglamentos</a></li>
+                        <li><a href="#">Ley de Transparencia</a></li>
+                        <li class="sub_dropdown">
+                            <a href="#">
+                                Escuela Federativa
+                                <img class="dropdown_arrow icon arrow_right" alt=">" src="./assets/icons/Antu-go-down-24.svg" /></a>
+                            <ul>
+                                <li><a href="#">Formación</a>
+                                <li><a href="#">Programas</a>
+                                <li><a href="#">Normativa EFN</a>
+                                <li><a href="#">Calendario EFN</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Antidopaje</a></li>
+                        <li><a href="#">Prensa y Tv</a></li>
+                        <li class="sub_dropdown">
+                            <a href="#">Circulares<img class="dropdown_arrow icon arrow_right" alt=">" src="./assets/icons/Antu-go-down-24.svg" /></a>
+                            <ul>
+                                <li><a href="#">RFEJYDA</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Especialidades Deportivas<img class="dropdown_arrow icon" alt="⌄"
+                            src="./assets/icons/Antu-go-down-24.svg" /></a>
+                    <ul>
+                        <li><a href="#">Judo</a></li>
+                        <li><a href="#">Aikido</a></li>
+                        <li><a href="#">Kendo</a></li>
+                        <li><a href="#">Defensa Personal</a></li>
+                        <li><a href="#">Wushu</a></li>
+                        <li><a href="#">Jiu Jitsu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Calendario</a></li>
+                <li class="dropdown">
+                    <a href="#">Clubs Baleares<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg" /></a>
+                    <ul>
+                        <li><a href="#">Clubs Judo</a></li>
+                        <li><a href="#">Clubs Aikido</a></li>
+                        <li><a href="#">Clubs Kendo</a></li>
+                        <li><a href="#">Clubs Defensa Personal</a></li>
+                        <li><a href="#">Clubs Wushu</a></li>
+                        <li><a href="#">Clubs Jiu Jitsu</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Contacta</a>
+                    <ul>
+                        <li><a href="#">Acceso Interno</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu_icons">
+            <a class="searcher icon" href="#">
+                <img alt="Search" src="./assets/icons/1382519138.svg" />
+            </a>
+            <a class="hamburger icon" href="#">
+                <img alt="Search" src="./assets/icons/7124209_menu_icon.svg" />
+            </a>
+        </div>
+    </header>
+    <main>
+        <div style="width: 100%; display: flex;">
+            
+            <div style="width: 20%; height: 100vh; position: sticky; top: 0;">
+                <ul class="arts_selector">
+                    <li><a href="#">Todas</a></li>
+                    <li><a href="#">Judo</a></li>
+                    <li><a href="#">Aikido</a></li>
+                    <li><a href="#">Kendo</a></li>
+                    <li><a href="#">Defensa Personal</a></li>
+                    <li><a href="#">Wushu</a></li>
+                    <li><a href="#">Jiu Jitsu</a></li>
+                </ul>
+                <div class="searcher">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+            </div>
+            <div style="width: 80%; height: 100%;">
+                <div class="news">
+                    <div class="other_news specific_news">
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
+                                <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 5">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/653A8E/FFFFFF" alt="News 6">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
+                            </a>
+                        </div>
+                        <div class="news_piece">
+                            <a href="#">
+                                <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
+                                <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <content class="dojo_locator" style="
+                                    height: 15em;
+                                    display: flex;
+                                    background-image: url('./assets/img/locator_background.jpg');
+                                    width: 100%;
+                                    gap: 2em;
+                                    background-position: center;
+                                    justify-content: space-around;
+                                    box-sizing: border-box;
+                                    background-size: cover;
+                                    padding: 2em 5em;
+                                ">
+            <div style="
+                                    width: 50%;
+                                    box-sizing: unset;
+                                    color: white;
+                                ">
+                <h3 style="
+                                    font-size: 2em;
+                                    margin: 0;
+                                ">Encuentra tu dojo más cercano</h3>
+                <p style="
+                                    margin: 0 0 2em;
+                                ">Utiliza nuestra herramienta de búsqueda para encontrar el dojo más cercano a tu ubicación.
+                </p><span style="
+                                    padding: .5em;
+                                    border: 1px solid;
+                                ">Encuentra tu dojo</span>
+            </div>
+            <div style="
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                ">
+                <div style="
+            position: relative;
+            display: flex;
+            justify-content: center;
+        "><img src="./assets/img/illes_balears.svg" style="height: 100%;"><img src="./assets/icons/location_map.svg" style="
+            height: 1em;
+            position: absolute;
+            top: 3em;
+            left: 10em;
+        "><img src="./assets/icons/location_map.svg" style="
+            height: 1em;
+            position: absolute;
+            top: 0em;
+            left: 16.5em;
+        "><img src="./assets/icons/location_map.svg" style="
+            height: 1em;
+            position: absolute;
+            bottom: 2em;
+            left: .75em;
+        "></div>
+            </div>
+        </content>
+    </main>
+    <footer>
+        <div class="columns">
+            <div class="column rrss">
+                <div class="footer_column_body">
+                    <ul>
+                        <li><img class="icon" src="./assets/icons/instagram.svg"/><a target="_blank" href="https://www.instagram.com/fbaljyda/">Instagram</a></li>
+                        <li><img class="icon" src="./assets/icons/facebook.svg"/><a target="_blank" href="https://www.facebook.com/profile.php?id=100002640585987">Facebook</a></li>
+                        <li><img class="icon" src="./assets/icons/youtube.svg"/><a target="_blank" href="https://www.youtube.com/channel/UCm8bD4smgksU13BzC0tur7g">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column sitemap">
+                <div class="footer_column_body">
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Información General</a>
+                        <li><a href="#">Organigrama</a></li>
+                        <li><a href="#">Censo Electoral 2020-2024</a></li>
+                        <li><a href="#">Estatutos y Reglamentos</a></li>
+                        <li><a href="#">Ley de Transparencia</a></li>
+                        <li><a href="#">Antidopaje</a></li>
+                        <li><a href="#">Prensa y Tv</a></li>
+                    </ul>
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Escuela Federativa</a>
+                        <li><a href="#">Formación</a>
+                        <li><a href="#">Programas</a>
+                        <li><a href="#">Normativa EFN</a>
+                        <li><a href="#">Calendario EFN</a>
+                    </ul>
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Clubs Baleares</a></li>
+                        <li><a href="#">Clubs Judo</a></li>
+                        <li><a href="#">Clubs Aikido</a></li>
+                        <li><a href="#">Clubs Kendo</a></li>
+                        <li><a href="#">Clubs Defensa Personal</a></li>
+                        <li><a href="#">Clubs Wushu</a></li>
+                        <li><a href="#">Clubs Jiu Jitsu</a></li>
+                    </ul>
+                    <ul>
+                        <li class="footer_column_info_category_title"><a href="#">Servicios</a></li>
+                        <li><a href="#">RFEJYDA</a></li>
+                        <li><a href="#">Circulares</a></li>
+                        <li><a href="#">Acceso Interno</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="footer_column_body">
+                    <ul>
+                        <li><img class="icon" src="./assets/icons/telephone.svg"/><a href="tel:+34971461109">(+34) 971 461 109</a></li>
+                        <li><img class="icon" src="./assets/icons/email-433830.svg"/><a href="mailto:secretariageneralfbjudo@gmail.com">secretariageneralfbjudo@gmail.com</a></li>
+                        <li>
+                            <img class="icon" src="./assets/icons/location-433840.svg"/>
+                            <div class="address">
+                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">Avinguda Uruguay, S/N, 07010, Palma</a>
+                                <span>Lunes-Viernes de 9:00 a 14:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <span>© Federació Balear de Judo i EE. AA</span>
+            <div class="legal_links">
+                <span>Nota Legal</span>
+                <span>Política de Privacidad</span>
+                <span>Política de Cookies</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
