@@ -102,38 +102,54 @@
             height: fit-content;
         }
 
-        ul.arts_selector > li > a {
-            text-decoration: none;
-        }
-        ul.arts_selector {
-            display: flex;
-            margin: 0;
-            padding: 1em 5em;
-            justify-content: space-between;
-            gap: 2em;
-            text-transform: uppercase;
-            font-size: 13px;
-            border-bottom: 1px solid rgb(104 104 104);
-        }
-        .searcher {
+        .filter_searcher {
             height: 4em;
             display: flex;
             gap: 2em;
             justify-content: space-between;
             align-items: center;
-            padding: 1em 5em;
+            padding: 1em 2em;
         }
 
-        .searcher input[type="text"]:focus {
+        .filter_searcher input[type="text"]:focus {
             outline: none;
+            background: none;
         }
 
-        .searcher input[type="text"] {
+        .filter_searcher input[type="text"] {
             width: 100%;
             height: 2em;
             text-transform: uppercase;
             border: none;
             border-bottom: 1px solid rgb(104 104 104);
+            background-image: url(assets/icons/1382519138.svg);
+            background-repeat: no-repeat;
+            background-position: calc(100% - .5em) center;
+            background-size: 1.25em;
+        }
+
+        .filter > ul {
+            width: 100%;
+            padding: 0;
+        }
+
+        .filter > ul > li {
+            height: 3em;
+            border-top: 1px solid;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            padding: 0 2em;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+
+        .filter > ul > li:hover {
+            cursor: pointer;
+        }
+
+        .filter > ul > li:last-child {
+            border-bottom: 1px solid;
         }
     </style>
 </head>
@@ -223,17 +239,16 @@
         <div style="width: 100%; display: flex;">
             
             <div style="width: 20%; height: 100vh; position: sticky; top: 0;">
-                <ul class="arts_selector">
-                    <li><a href="#">Todas</a></li>
-                    <li><a href="#">Judo</a></li>
-                    <li><a href="#">Aikido</a></li>
-                    <li><a href="#">Kendo</a></li>
-                    <li><a href="#">Defensa Personal</a></li>
-                    <li><a href="#">Wushu</a></li>
-                    <li><a href="#">Jiu Jitsu</a></li>
-                </ul>
-                <div class="searcher">
+                <div class="filter_searcher">
                     <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="filter">
+                    <ul>
+                        <li>Ordenar por<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
+                        <li>Fecha Publicación<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
+                        <li>Especialidad Deportiva<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
+                        <li>Palabras Clave<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
+                    </ul>
                 </div>
             </div>
             <div style="width: 80%; height: 100%;">
