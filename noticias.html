@@ -108,7 +108,7 @@
             gap: 2em;
             justify-content: space-between;
             align-items: center;
-            padding: 1em 2em;
+            padding: .5em 2em;
         }
 
         .filter_searcher input[type="text"]:focus {
@@ -121,7 +121,7 @@
             height: 2em;
             text-transform: uppercase;
             border: none;
-            border-bottom: 1px solid rgb(104 104 104);
+            border-bottom: 1px solid #cbcbcb;
             background-image: url(assets/icons/1382519138.svg);
             background-repeat: no-repeat;
             background-position: calc(100% - .5em) center;
@@ -131,25 +131,81 @@
         .filter > ul {
             width: 100%;
             padding: 0;
+            margin: 0;
         }
 
         .filter > ul > li {
-            height: 3em;
-            border-top: 1px solid;
+            height: fit-content;
+            border-top: 1px solid #cbcbcb;
             width: 100%;
             align-items: center;
             display: flex;
-            padding: 0 2em;
+            flex-direction: column;
+            padding: 1em 2em;
             box-sizing: border-box;
             justify-content: space-between;
         }
 
-        .filter > ul > li:hover {
+        .filter > ul > li > div:first-child {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .filter > ul > li > div:not(:first-child) {
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 1em 0 0;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+
+        .filter > ul > li > div:not(:first-child) > ul {
+            padding: 0;
+        }
+
+        .filter .filter_title:hover {
             cursor: pointer;
         }
 
         .filter > ul > li:last-child {
-            border-bottom: 1px solid;
+            border-bottom: 1px solid #cbcbcb;
+        }
+
+        .filter_title {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .filter_suboptions li {
+            padding: .5em;
+        }
+
+        .filter_selector ul, .filter_selector div {
+            padding: 0.5em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em 1em;
+            font-size: 13px;
+        }
+
+        .filter_selector li, .filter_selector input {
+            padding: 0.25em;
+            border: 1px solid #cbcbcb;
+        }
+
+        .filter_selector li:hover {
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .filter_date {
+            padding: .5em;
+            display: flex;
+            gap: 0.5em;
         }
     </style>
 </head>
@@ -238,16 +294,67 @@
     <main>
         <div style="width: 100%; display: flex;">
             
-            <div style="width: 20%; height: 100vh; position: sticky; top: 0;">
+            <div style="width: 20%;height: 100vh;position: sticky;top: 0;box-shadow: 0px 3px 1em rgba(0, 0, 0, .1);">
                 <div class="filter_searcher">
                     <input type="text" placeholder="Buscar...">
                 </div>
                 <div class="filter">
                     <ul>
-                        <li>Ordenar por<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
-                        <li>Fecha Publicación<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
-                        <li>Especialidad Deportiva<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
-                        <li>Palabras Clave<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></li>
+                        <li>
+                            <div class="filter_title">
+                                Ordenar Por<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg">
+                            </div>
+                            <div class="filter_selector">
+                                <ul>
+                                    <li>Más reciente</li>
+                                    <li>Más antigua</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="filter_title">
+                                Filtros<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg">
+                            </div>
+                            <div class="filter_suboptions">
+                                <ul>
+                                    <li>
+                                        <div class="filter_title">Fecha Publicación<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></div>
+                                        <div class="filter_selector filter_date">
+                                            <input type="date" placeholder="Desde"> <input type="date" placeholder="Hasta">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_title">Especialidad Deportiva<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></div>
+                                        <div class="filter_selector">
+                                            <ul>
+                                                <li>Judo</li>
+                                                <li>Aikido</li>
+                                                <li>Kendo</li>
+                                                <li>Defensa Personal</li>
+                                                <li>Wushu</li>
+                                                <li>Jiu Jitsu</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_title">Palabras Clave<img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></div>
+                                        <div class="filter_selector">
+                                            <ul>
+                                                <li>Aula Formación Permanente</li>
+                                                <li>Competición</li>
+                                                <li>Exhibición</li>
+                                                <li>Curso</li>
+                                                <li>Premio</li>
+                                                <li>Mallorca</li>
+                                                <li>Ibiza</li>
+                                                <li>Menorca</li>
+                                                <li>Formentera</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
