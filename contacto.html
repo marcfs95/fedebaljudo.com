@@ -13,6 +13,38 @@
         #map {
             z-index: 0;
         }
+
+        form input {
+            height: 2.5em;
+            width: 50%;
+            text-transform: uppercase;
+        }
+
+        form div {
+            display: flex;
+            gap: 1em;
+        }
+
+        main ul {
+            display: flex;
+            padding: 0;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        main li {
+            width: auto;
+            align-items: center;
+            max-width: 50%;
+            box-sizing: border-box;
+            display: flex;
+            gap: 0.5em;
+        }
+
+        main li a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -106,25 +138,117 @@
     </header>
     <main>
         <div style="width: 100%; display: flex;">
-            <div style="width: 50%; height: 100vh; position: sticky; top: 0;" id="map"></div>
+            <div style="width: 50%; position: sticky; top: 0;" id="map"></div>
             <div style="width: 50%; height: 100%;">
-                <div style="padding: 2em 5em;">
+                <div style="padding: 2em 5em 4em;">
+                    <h2>Información</h2>
+                    <ul>
+                        <li><img class="icon" src="./assets/icons/call.svg">
+                            <a href="tel:+34971461109">(+34) 971 461 109</a>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/email.svg">
+                            <a href="mailto:secretariageneralfbjudo@gmailcom">
+                                secretariageneralfbjudo@gmailcom
+                            </a>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/location.svg">
+                            <div class="address">
+                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
+                                    Avinguda Uruguay, S/N, 07010, Palma
+                                </a>
+                                <span>Lunes-Viernes de 9:00 a 14:00</span>
+                            </div>
+                        </li>
+                    </ul>
                     <h2>Contacto</h2>
+                    <form style="width: 100%; display: flex; gap: 1em; flex-direction: column;">
+                        <div style="display: flex; gap: 1em;">
+                            <input type="text" name="name" placeholder="Nombre">
+                            <input type="text" name="lastname" placeholder="Apellidos">
+                        </div>
+                        <div style="display: flex; gap: 1em;">
+                            <input type="email" name="email" placeholder="Email">
+                            <input type="tel" name="telephone" placeholder="Teléfono">
+                        </div>
+                        <textarea name="comment" rows="15" placeholder="COMENTARIO"></textarea>
+                        <div style="justify-content: space-between;">
+                            <div class="legal_form" style="align-items: center; gap: 0.25em;">
+                                <input type="checkbox" name="legal" style="height: unset; width: unset;">Acepto la Política de Privacidad
+                            </div>
+                            <input type="submit" value="Enviar" style="width: 10em;">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+        <content class="dojo_locator" style="
+                                    height: 15em;
+                                    display: flex;
+                                    background-image: url('./assets/img/locator_background.jpg');
+                                    width: 100%;
+                                    gap: 2em;
+                                    background-position: center;
+                                    justify-content: space-around;
+                                    box-sizing: border-box;
+                                    background-size: cover;
+                                    padding: 2em 5em;
+                                ">
+            <div style="
+                                    width: 50%;
+                                    box-sizing: unset;
+                                    color: white;
+                                ">
+                <h3 style="
+                                    font-size: 2em;
+                                    margin: 0;
+                                ">Encuentra tu dojo más cercano</h3>
+                <p style="
+                                    margin: 0 0 2em;
+                                ">Utiliza nuestra herramienta de búsqueda para encontrar el dojo más cercano a tu ubicación.
+                </p><span style="
+                                    padding: .5em;
+                                    border: 1px solid;
+                                ">Encuentra tu dojo</span>
+            </div>
+            <div style="
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                ">
+                <div style="
+            position: relative;
+            display: flex;
+            justify-content: center;
+        "><img src="./assets/img/illes_balears.svg" style="height: 100%;"><img src="./assets/icons/location_map.svg" style="
+            height: 1em;
+            position: absolute;
+            top: 3em;
+            left: 10em;
+        "><img src="./assets/icons/location_map.svg" style="
+            height: 1em;
+            position: absolute;
+            top: 0em;
+            left: 16.5em;
+        "><img src="./assets/icons/location_map.svg" style="
+            height: 1em;
+            position: absolute;
+            bottom: 2em;
+            left: .75em;
+        "></div>
+            </div>
+        </content>
     </main>
     <footer>
         <div class="columns">
             <div class="column rrss">
                 <div class="footer_column_body">
                     <ul>
-                        <li><img class="icon" src="./assets/icons/instagram.svg"><a target="_blank"
-                                href="https://www.instagram.com/fbaljyda/">Instagram</a></li>
-                        <li><img class="icon" src="./assets/icons/facebook.svg"><a target="_blank"
-                                href="https://www.facebook.com/profile.php?id=100002640585987">Facebook</a></li>
-                        <li><img class="icon" src="./assets/icons/youtube.svg"><a target="_blank"
-                                href="https://www.youtube.com/channel/UCm8bD4smgksU13BzC0tur7g">YouTube</a></li>
+                        <li><img class="icon" src="./assets/icons/facebook.svg"><a target="_blank" href="https://www.facebook.com/profile.php?id=100002640585987">Facebook</a></li>
+                        <li><img class="icon" src="./assets/icons/instagram.svg"><a target="_blank" href="https://www.instagram.com/fbaljyda/">Instagram</a></li>
+                        <li><img class="icon" src="./assets/icons/twitter.svg"/><a target="_blank" href="https://twitter.com/fbjyda">Twitter</a></li>
+                        <li><img class="icon" src="./assets/icons/youtube.svg"><a target="_blank" href="https://www.youtube.com/channel/UCm8bD4smgksU13BzC0tur7g">YouTube</a></li>
                     </ul>
                 </div>
             </div>
@@ -205,7 +329,7 @@
     </footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
-        var map = L.map('map').setView([39.609226125238436, 2.6362661921054587], 15),
+        var map = L.map('map').setView([39.609226125238436, 2.6362661921054587], 13),
             customMarker = L.icon({
                 iconUrl: './assets/img/cropped-Logo_fede-2.png',
                 iconSize: [48, 48],
