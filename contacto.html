@@ -18,7 +18,46 @@
             height: 2.5em;
             width: 50%;
             text-transform: uppercase;
+            border: none;
+            border-bottom: 1px solid #cbcbcb;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 0.5em) center;
+            background-size: 1.25em;
         }
+
+        textarea {
+            border: none;
+            border-bottom: 1px solid #cbcbcb;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        input[name=telephone]{
+            background-image: url(assets/icons/call.svg);
+        }
+
+        input[name=name], input[name=lastname]{
+            background-image: url(assets/icons/person.svg);
+        }
+
+        input[name=email]{
+            background-image: url(assets/icons/email.svg);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+        }
+
+        input[type=submit] {
+            width: 10em;
+            background-color: unset;
+            border: 1px solid #cbcbcb;
+        }
+
+        input[type=submit]:hover {
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
 
         form div {
             display: flex;
@@ -36,7 +75,7 @@
         main li {
             width: auto;
             align-items: center;
-            max-width: 50%;
+            width: 48%;
             box-sizing: border-box;
             display: flex;
             gap: 0.5em;
@@ -44,6 +83,10 @@
 
         main li a {
             text-decoration: none;
+        }
+
+        .icon {
+            width: 24px;
         }
     </style>
 </head>
@@ -60,7 +103,7 @@
             <ul>
                 <li class="dropdown">
                     <a href="#">Información General
-                        <img class="dropdown_arrow icon" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></a>
+                        <img class="icon dropdown_arrow" alt="⌄" src="./assets/icons/Antu-go-down-24.svg"></a>
                     <ul>
                         <li><a href="#">Organigrama</a></li>
                         <li><a href="#">Censo Electoral 2020-2024</a></li>
@@ -85,7 +128,7 @@
                         <li><a href="#">Antidopaje</a></li>
                         <li><a href="#">Prensa y Tv</a></li>
                         <li class="sub_dropdown">
-                            <a href="#">Circulares<img class="dropdown_arrow icon arrow_right" alt=">"
+                            <a href="#">Circulares<img class="icon dropdown_arrow arrow_right" alt=">"
                                     src="./assets/icons/Antu-go-down-24.svg"></a>
                             <ul>
                                 <li><a href="#">RFEJYDA</a>
@@ -95,7 +138,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#">Especialidades Deportivas<img class="dropdown_arrow icon" alt="⌄"
+                    <a href="#">Especialidades Deportivas<img class="icon dropdown_arrow" alt="⌄"
                             src="./assets/icons/Antu-go-down-24.svg"></a>
                     <ul>
                         <li><a href="#">Judo</a></li>
@@ -108,7 +151,7 @@
                 </li>
                 <li><a href="#">Calendario</a></li>
                 <li class="dropdown">
-                    <a href="#">Clubs Baleares<img class="dropdown_arrow icon" alt="⌄"
+                    <a href="#">Clubs Baleares<img class="icon dropdown_arrow" alt="⌄"
                             src="./assets/icons/Antu-go-down-24.svg"></a>
                     <ul>
                         <li><a href="#">Clubs Judo</a></li>
@@ -158,8 +201,13 @@
                                 <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
                                     Avinguda Uruguay, S/N, 07010, Palma
                                 </a>
-                                <span>Lunes-Viernes de 9:00 a 14:00</span>
                             </div>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/clock.svg">
+                            <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
+                                Lunes-Viernes de 9:00 a 14:00
+                            </a>
                         </li>
                     </ul>
                     <h2>Contacto</h2>
@@ -177,7 +225,7 @@
                             <div class="legal_form" style="align-items: center; gap: 0.25em;">
                                 <input type="checkbox" name="legal" style="height: unset; width: unset;">Acepto la Política de Privacidad
                             </div>
-                            <input type="submit" value="Enviar" style="width: 10em;">
+                            <input type="submit" value="Enviar">
                         </div>
                     </form>
                 </div>
@@ -311,7 +359,14 @@
                                 <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
                                     Avinguda Uruguay, S/N, 07010, Palma
                                 </a>
-                                <span>Lunes-Viernes de 9:00 a 14:00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/clock.svg">
+                            <div class="address">
+                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
+                                    Lunes-Viernes de 9:00 a 14:00
+                                </a>
                             </div>
                         </li>
                     </ul>
