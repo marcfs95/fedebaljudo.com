@@ -439,6 +439,14 @@ nav .dropdown ul li.sub_dropdown ul {
     flex-direction: column;
 }
 
+.news > h3 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #af9571;
+    text-align: center;
+    font-weight: 900;
+}
+
 /* Main News */
 
 .main_news {
@@ -530,6 +538,10 @@ nav .dropdown ul li.sub_dropdown ul {
 }
 
 @media screen and (max-width: 600px) {
+    .news {
+        padding: 1rem;
+    }
+    
     .highlight_news {
         height: fit-content;
         flex-direction: column;
@@ -545,7 +557,7 @@ nav .dropdown ul li.sub_dropdown ul {
     }
 
     .secundary_news {
-        width: 100vw;
+        width: 100%;
     }
 
     .secundary_news > .news_piece {
@@ -557,8 +569,8 @@ nav .dropdown ul li.sub_dropdown ul {
     }
 
     .other_news > .news_piece {
-        width: 50vw;
         height: 13em;
+        width: calc(50% - 0.5rem);
     }
 }
 
