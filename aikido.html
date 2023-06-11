@@ -47,24 +47,6 @@
             background-color: #f7e8cd;
         }
 
-        .news {
-            padding: 2em 3em;
-            background-size: cover;
-            background-position: center;
-            background-image: url(./assets/img/news_background.jpg);
-        }
-
-        .other_news {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1em;
-        }
-
-        .specific_news .news_piece {
-            width: 20em;
-        }
-
         .slider > div {
             position: absolute;
             display: flex;
@@ -100,6 +82,45 @@
 
         .slider_content_text_description {
             height: fit-content;
+        }
+
+        @media screen and (max-width: 600px) {
+            div.slider_content {
+                padding: 1rem;
+            }
+
+            .slider_content_text {
+                width: 75%;
+            }
+            
+            img.logo_art {
+                padding: 9rem 0;
+            }
+
+            section {
+                padding: 1rem;
+                gap: 2rem;
+            }
+
+            .content_with_image {
+                gap: 1rem;
+            }
+
+            .content_with_image:first-child {
+                flex-direction: column-reverse;
+            }
+
+            .content_with_image {
+                flex-direction: column;
+            }
+
+            .content_with_image > div {
+                width: 100%;
+            }
+
+            .content_with_image > .image {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -223,13 +244,13 @@
                 </div>
             </div>
         </section>
-        <div class="separator">NOTICIAS RELACIONADAS</div>
         <div class="news">
-            <div class="other_news specific_news">
+            <h3>Noticias</h3>
+            <div class="other_news">
                 <div class="news_piece">
                     <a href="#">
                         <span class="news_title">Curso Aula de formación Permanente de Defensa Personal</span>
-                        <img src="https://via.placeholder.com/800x600/e7805a/FFFFFF" alt="News 4">
+                        <img src="https://via.placeholder.com/800x600/3A568E/FFFFFF" alt="News 4">
                     </a>
                 </div>
                 <div class="news_piece">
@@ -250,31 +271,8 @@
                         <img src="https://via.placeholder.com/800x600/8E3A89/FFFFFF" alt="News 7">
                     </a>
                 </div>
-                <div class="news_piece">
-                    <a href="#">
-                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
-                        <img src="https://via.placeholder.com/800x600/8E553A/FFFFFF" alt="News 8">
-                    </a>
-                </div>
-                <div class="news_piece">
-                    <a href="#">
-                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
-                        <img src="https://via.placeholder.com/800x600/8E843A/FFFFFF" alt="News 9">
-                    </a>
-                </div>
-                <div class="news_piece">
-                    <a href="#">
-                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
-                        <img src="https://via.placeholder.com/800x600/4DD6DC/FFFFFF" alt="News 10">
-                    </a>
-                </div>
-                <div class="news_piece">
-                    <a href="#">
-                        <span class="news_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pellentesque.</span>
-                        <img src="https://via.placeholder.com/800x600/3DF374/FFFFFF" alt="News 11">
-                    </a>
-                </div>
             </div>
+            <span style="padding: .5rem;width: fit-content;align-self: center;margin-top: 2rem;border: 1px solid;cursor: pointer;">Ver más</span>
         </div>
         <content class="dojo_locator">
             <div class="dojo_locator_text">
@@ -297,9 +295,10 @@
             <div class="column rrss">
                 <div class="footer_column_body">
                     <ul>
-                        <li><img class="icon" src="./assets/icons/instagram.svg"/><a target="_blank" href="https://www.instagram.com/fbaljyda/">Instagram</a></li>
-                        <li><img class="icon" src="./assets/icons/facebook.svg"/><a target="_blank" href="https://www.facebook.com/profile.php?id=100002640585987">Facebook</a></li>
-                        <li><img class="icon" src="./assets/icons/youtube.svg"/><a target="_blank" href="https://www.youtube.com/channel/UCm8bD4smgksU13BzC0tur7g">YouTube</a></li>
+                        <li><img class="icon" src="./assets/icons/facebook.svg"><a target="_blank" href="https://www.facebook.com/profile.php?id=100002640585987">Facebook</a></li>
+                        <li><img class="icon" src="./assets/icons/instagram.svg"><a target="_blank" href="https://www.instagram.com/fbaljyda/">Instagram</a></li>
+                        <li><img class="icon" src="./assets/icons/twitter.svg"/><a target="_blank" href="https://twitter.com/fbjyda">Twitter</a></li>
+                        <li><img class="icon" src="./assets/icons/youtube.svg"><a target="_blank" href="https://www.youtube.com/channel/UCm8bD4smgksU13BzC0tur7g">YouTube</a></li>
                     </ul>
                 </div>
             </div>
@@ -307,6 +306,7 @@
                 <div class="footer_column_body">
                     <ul>
                         <li class="footer_column_info_category_title"><a href="#">Información General</a>
+                        </li>
                         <li><a href="#">Organigrama</a></li>
                         <li><a href="#">Censo Electoral 2020-2024</a></li>
                         <li><a href="#">Estatutos y Reglamentos</a></li>
@@ -316,10 +316,15 @@
                     </ul>
                     <ul>
                         <li class="footer_column_info_category_title"><a href="#">Escuela Federativa</a>
+                        </li>
                         <li><a href="#">Formación</a>
+                        </li>
                         <li><a href="#">Programas</a>
+                        </li>
                         <li><a href="#">Normativa EFN</a>
+                        </li>
                         <li><a href="#">Calendario EFN</a>
+                        </li>
                     </ul>
                     <ul>
                         <li class="footer_column_info_category_title"><a href="#">Clubs Baleares</a></li>
@@ -341,13 +346,29 @@
             <div class="column">
                 <div class="footer_column_body">
                     <ul>
-                        <li><img class="icon" src="./assets/icons/telephone.svg"/><a href="tel:+34971461109">(+34) 971 461 109</a></li>
-                        <li><img class="icon" src="./assets/icons/email-433830.svg"/><a href="mailto:secretariageneralfbjudo@gmail.com">secretariageneralfbjudo@gmail.com</a></li>
+                        <li><img class="icon" src="./assets/icons/call.svg">
+                            <a href="tel:+34971461109">(+34) 971 461 109</a>
+                        </li>
                         <li>
-                            <img class="icon" src="./assets/icons/location-433840.svg"/>
+                            <img class="icon" src="./assets/icons/email.svg">
+                            <a href="mailto:secretariageneralfbjudo@gmailcom">
+                                secretariageneralfbjudo@gmailcom
+                            </a>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/location.svg">
                             <div class="address">
-                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">Avinguda Uruguay, S/N, 07010, Palma</a>
-                                <span>Lunes-Viernes de 9:00 a 14:00</span>
+                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
+                                    Avinguda Uruguay, S/N, 07010, Palma
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="icon" src="./assets/icons/clock.svg">
+                            <div class="address">
+                                <a target="_blank" href="https://goo.gl/maps/HZSjBhcYcpSUTfj29">
+                                    Lunes-Viernes de 9:00 a 14:00
+                                </a>
                             </div>
                         </li>
                     </ul>

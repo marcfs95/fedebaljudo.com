@@ -541,7 +541,7 @@ nav .dropdown ul li.sub_dropdown ul {
 }
 
 .news > h3 {
-    margin: 0 0 1rem;
+    margin: 0 0 1.25rem;
     font-size: 1.5rem;
     color: #af9571;
     text-align: center;
@@ -774,6 +774,7 @@ footer > .columns {
     padding: 2em;
     box-sizing: border-box;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer .column {
