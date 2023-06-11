@@ -244,6 +244,7 @@ nav .dropdown ul li.sub_dropdown ul {
     .main_banner {
         height: calc(100vh - 35vh);
     }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -914,4 +915,10 @@ ul {
 
 section ul li {
     margin: 1.5em 0;
+}
+
+@media screen and (max-width: 600px) {
+    section{
+        padding: 1rem;
+    }
 }
