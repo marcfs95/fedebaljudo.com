@@ -367,6 +367,107 @@ nav .dropdown ul li.sub_dropdown ul {
 }
 
 /* End Slider*/
+
+/*  */
+
+.dojo_locator {
+    height: 15em;
+    display: flex;
+    background-image: url(../img/locator_background.jpg);
+    width: 100%;
+    gap: 2em;
+    background-position: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-size: cover;
+    padding: 2em 5em;
+    overflow: hidden;
+}
+
+.dojo_locator_text {
+    width: 50%;
+    box-sizing: unset;
+    color: white;
+}
+
+.dojo_locator_text > h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.dojo_locator_text > p {
+    margin: 0 0 2em;
+}
+
+.dojo_locator_text > span {
+    padding: .5em;
+    border: 1px solid;
+}
+
+.locator_banner_map {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.locator_banner_map > div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.pointer {
+    height: 1rem;
+    position: absolute;
+}
+
+.locator_banner_map_pointer_first {
+    top: 3rem;
+    left: 10rem;
+}
+
+.locator_banner_map_pointer_second {
+    top: 0em;
+    left: 16.5em;
+}
+
+.locator_banner_map_pointer_third {
+    bottom: 2em;
+    left: .75em;
+}
+
+@media screen and (max-width: 600px) {
+    .dojo_locator {
+        height: 15rem;
+        display: flex;
+        background-image: url(../img/locator_background.jpg);
+        width: 100%;
+        gap: 2em;
+        background-position: center;
+        justify-content: space-around;
+        box-sizing: border-box;
+        background-size: cover;
+        overflow: hidden;
+        padding: 1rem;
+    }
+
+    .dojo_locator > div {
+        width: 70%;
+        box-sizing: unset;
+        color: white;
+        position: absolute;
+        z-index: 1;
+        left: 1rem;
+    }
+
+    .locator_banner_map {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/*  */
+
 /* Columns */
 
 .columns {
@@ -576,7 +677,15 @@ nav .dropdown ul li.sub_dropdown ul {
 
 /* Sponsors */
 
-.sponsors {
+.sponsors_banner > h3 {
+    font-size: 1.5rem;
+    color: rgb(104 104 104);
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: .5rem;
+}
+
+.sponsors_list {
     width: 100vw;
     display: flex;
     align-items: center;
@@ -606,7 +715,7 @@ nav .dropdown ul li.sub_dropdown ul {
 }
 
 @media screen and (max-width: 600px) {
-    .sponsors {
+    .sponsors_list {
         flex-direction: column;
         height: 30em;
         position: relative;
