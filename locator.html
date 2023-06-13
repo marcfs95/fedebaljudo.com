@@ -25,6 +25,10 @@
         }
 
         #map {
+            width: 50%;
+            height: 100vh;
+            position: sticky;
+            top: 0;
             z-index: 0;
         }
 
@@ -141,6 +145,60 @@
         .locator_dojo_contact_buttons > img.icon {
             width: 1.5em;
         }
+
+        .locator_list_container {
+            width: 50%; height: 100%;
+        }
+
+        .locator_main_div {
+            width: 100%;
+            display: flex;
+        }
+
+        @media screen and (max-width: 600px) {
+            .locator_list_container {
+                width: 100%;
+                height: 100%;
+            }
+
+            ul.arts_selector{
+                padding: 1em;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 1.5rem;
+            }
+
+            .searcher {
+                padding: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .searcher input[type="text"] {
+                width: 80%;
+            }
+
+            .locator_results_searcher {
+                padding: 1em;
+            }
+
+            .dojo_card {
+                width: 100%;
+            }
+
+            #map {
+                height: 40vh;
+                width: 100%;
+                position: relative;
+                top: 0px;
+                outline-style: none;
+            }
+
+            .locator_main_div {
+                flex-direction: column-reverse;
+            }
+        }
     </style>
 </head>
 
@@ -233,8 +291,8 @@
         </div>
     </header>
     <main>
-        <div style="width: 100%; display: flex;">
-            <div style="width: 50%; height: 100%;">
+        <div class="locator_main_div">
+            <div class="locator_list_container">
                 <ul class="arts_selector">
                     <li><a href="#">Todas</a></li>
                     <li><a href="#">Judo</a></li>
@@ -496,9 +554,8 @@
                     </div>
                 </div>
             </div>
-            <div style="width: 50%; height: 100vh; position: sticky; top: 0;" id="map"></div>
+            <div id="map"></div>
         </div>
-        
     </main>
     <footer>
         <div class="columns">
